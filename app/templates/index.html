@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<!--
+	Snapshot by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>CIBR</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" >
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js" ></script>
+		</head>
+	<body>
+		<div class="page-wrap">
+
+			<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li><a href="#" class="active"><span class="icon fa-home"></span></a></li>
+						<li><a href="#galleries" class="scrolly"><span class="icon fa-camera-retro "></span></a></li>
+						<li><a href="#footer" class="scrolly"><span class="icon fa-file-text-o  "></span></a></li>
+					</ul>
+				</nav>
+
+			<!-- Main -->
+				<section id="main">
+
+					<!-- Banner -->
+						<section id="banner">
+							<div class="inner">
+								<h1>Hey!</h1>
+								<p>Welcome to OpenCv Image Search ^-^</p>
+								<div class="container py-5">
+
+									<div class="row ">
+										<div class=" mx-auto">
+
+										<!-- Upload image input-->
+										<div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
+											<input id="upload" type="file" onchange="readURL(this);" class="form-control border-0" accept="image/*">
+											<label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
+											<div class="input-group-append">
+												<label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
+											</div>
+										</div>
+
+										</div>
+									</div>
+								</div>
+
+								<ul class="actions">
+									<li><a href="#galleries" class="button alt scrolly big">Continue</a></li>
+								</ul>
+							</div>
+						</section>
+
+					<!-- Gallery -->
+						<section id="galleries">
+
+							<!-- Photo Galleries -->
+								<div class="gallery">
+									<header class="special">
+										<h2>Search Results :</h2>
+									</header>
+									<div class="content" id="content">
+										<div class="content" id="content">
+										<div class="media" ><a href="static/dataset\BACKGROUND_Google\image_0032.jpg"><img src="static/dataset\BACKGROUND_Google\image_0032.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div><div class="media" ><a href="static/dataset\BACKGROUND_Google\image_0117.jpg"><img src="static/dataset\BACKGROUND_Google\image_0117.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div><div class="media" ><a href="static/dataset\scissors\image_0012.jpg"><img src="static/dataset\scissors\image_0012.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div><div class="media" ><a href="static/dataset\mayfly\image_0011.jpg"><img src="static/dataset\mayfly\image_0011.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div><div class="media" ><a href="static/dataset\mayfly\image_0034.jpg"><img src="static/dataset\mayfly\image_0034.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div><div class="media" ><a href="static/dataset\pyramid\image_0046.jpg"><img src="static/dataset\pyramid\image_0046.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div><div class="media" ><a href="static/dataset\wrench\image_0006.jpg"><img src="static/dataset\wrench\image_0006.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div><div class="media" ><a href="static/dataset\wrench\image_0005.jpg"><img src="static/dataset\wrench\image_0005.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div><div class="media" ><a href="static/dataset\scissors\image_0037.jpg"><img src="static/dataset\scissors\image_0037.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div><div class="media" ><a href="static/dataset\wrench\image_0038.jpg"><img src="static/dataset\wrench\image_0038.jpg" alt="" title="This right here is a caption."  style="height: 150px; width:199px; "></a></div></div>
+									</div>
+
+								</div>
+						</section>
+
+					<!-- Footer -->
+						<footer id="footer">
+							<div class="copyright">
+								&copy; MBD/SIM -
+								<br>El Afia youness
+								<br> Hmimed Hamza
+								<br> Nouiri Hafsa
+							</div>
+						</footer>
+				</section>
+		</div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/jquery.poptrox.min.js"></script>
+			<script src="static/assets/js/jquery.scrolly.min.js"></script>
+			<script src="static/assets/js/skel.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+			<script>
+
+				/*  ==========================================
+					SHOW UPLOADED IMAGE
+				* ========================================== */
+				function readURL(input) {
+					if (input.files && input.files[0]) {
+						var reader = new FileReader();
+
+						reader.onload = function (e) {
+							$('#banner')
+								.css("background-image", "url(" +  e.target.result + ")");
+							$( "#galleries>.gallery>.content" ).empty();
+						};
+						reader.readAsDataURL(input.files[0]);
+					}
+				}
+
+				$(function () {
+					$('#upload').on('change', function () {
+						readURL(input);
+						// grab image url
+						var form_data = new FormData();
+						form_data.append('file', $('#upload').prop('files')[0]);
+
+							//console.log(image)
+						// ajax request
+						$.ajax({
+							type: "POST",
+							url: "/search",
+							data :form_data,
+							contentType: false,
+							cache: false,
+							processData: false,
+							// handle success
+							success: function(result) {
+								console.log(result)
+								$(document).ready(function(){
+								for (var key in result) {
+									// do something with `substr[i]`
+									var filename =result[key]
+									//alert(filename)
+									//alert('<img src="{{ url_for("static", filename="/")}}'+filename+'" alt="" title="This right here is a caption." />')
+									var content = $('<div class="media"style="height: 200px; width: 200px; "><a href="'+filename+'">'
+										+ '<img src="'+filename+'" alt="" title="This right here is a caption."  style="height: 150px; width:199px; " /></a></div>')
+										content.appendTo('#galleries>.gallery>.content');
+								}
+								//$("#galleries").load(" #galleries");
+							});
+							},
+							// handle error
+							error: function(error) {
+								console.log(error);
+							}
+						});
+
+					});
+				});
+
+				/*  ==========================================
+					SHOW UPLOADED IMAGE NAME
+				* ========================================== */
+				var input = document.getElementById( 'upload' );
+				var infoArea = document.getElementById( 'upload-label' );
+
+				input.addEventListener( 'change', showFileName );
+				function showFileName( event ) {
+				var input = event.srcElement;
+				var fileName = input.files[0].name;
+				infoArea.textContent = 'File name: ' + fileName;
+				}
+
+
+
+			</script>
+
+	</body>
+</html>
